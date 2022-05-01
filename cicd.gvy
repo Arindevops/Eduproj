@@ -3,7 +3,7 @@ pipeline {
     stages {
 	    stage('Deploy-Docker') {
 			steps {
-              sh 'ansible-playbook --inventory /etc/ansible/inv $WORKSPACE/docker.yml --extra-vars "env=qa"'
+              sh 'ansible-playbook --inventory $WORKSPACE/inv $WORKSPACE/docker.yml --extra-vars "env=qa"'
 			}
 		}	
         stage('build & run docker image') {
