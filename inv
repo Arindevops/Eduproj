@@ -1,0 +1,2 @@
+[qa]
+13.233.197.132 ansible_user=devops ansible_ssh_pass=today@1234
