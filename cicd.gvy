@@ -1,5 +1,5 @@
 pipeline {
-    agent Agent1
+    agent any
     stages {
 	    stage('Deploy-Docker') {
 			steps {
