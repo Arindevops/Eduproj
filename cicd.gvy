@@ -8,8 +8,9 @@ pipeline {
 		}	
         stage('build & run docker image') {
 	        steps {  
-                    sh script: 'cd  $WORKSPACE'
-                    sh script: 'docker build --file dfile --tag docker.io/arindam1987/webapp:$BUILD_NUMBER .'
+                    	sh script: 'cd  $WORKSPACE'
+                    	sh script: 'docker build --file dfile --tag docker.io/arindam1987/webapp:$BUILD_NUMBER .'
+			sh script: 'docker run -d -P arindam1987/webapp:$BUILD_NUMBER'
 			}
 			post {
                failure {
